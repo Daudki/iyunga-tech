@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Students Registration | Iyunga Technical Secondary School</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+    <div id="header"></div>
+
+    <main class="page-main">
+        <section class="page-hero">
+            <div class="container">
+                <p class="eyebrow">STUDENTS · REGISTRATION</p>
+                <h1>Student Registration</h1>
+                <p>Fill in the appropriate form below to register. Please ensure all information is accurate.</p>
+            </div>
+        </section>
+
+        <section class="section registration-section">
+            <div class="container">
+                <div class="form-heading">
+                    <div>
+                        <p class="eyebrow">ADMISSIONS</p>
+                        <h2>Student information</h2>
+                    </div>
+                    <p>Complete the details below. The same registration form is used for students joining O-Level and Advanced Level.</p>
+                </div>
+
+                <form id="addForm" class="registration-form" action="">
+                    <div class="form-section">
+                        <h3 class="section-title">Personal Information</h3>
+                        <div class="section-grid">
+                            <div class="input-grp">
+                                <label for="first-name">First name</label>
+                                <input id="first-name" type="text" required>
+                            </div>
+                            <div class="input-grp">
+                                <label for="second-name">Second name</label>
+                                <input id="second-name" type="text" required>
+                            </div>
+                            <div class="input-grp">
+                                <label for="surname">Surname</label>
+                                <input id="surname" type="text" required>
+                            </div>
+                            <div class="input-grp">
+                                <label for="gender">Gender</label>
+                                <select id="gender" name="gender" required>
+                                    <option value="">Select Gender</option>
+                                    <option value="Male">Male</option>
+                                    <option value="Female">Female</option>
+                                </select>
+                            </div>
+                            <div class="input-grp">
+                                <label for="date">Date of birth</label>
+                                <input id="date" type="date" required>
+                            </div>
+                            <div class="input-grp">
+                                <label for="birth-place">Birth Place</label>
+                                <input id="birth-place" type="text" required>
+                            </div>
+                            <div class="input-grp">
+                                <label for="nationality">Nationality</label>
+                                <input id="nationality" type="text" required>
+                            </div>
+                            <div class="input-grp">
+                                <label for="religion">Religion</label>
+                                <select name="religion" id="religion">
+                                    <option value="">Select Religion</option>
+                                    <option value="christian">Christian</option>
+                                    <option value="islam">Islam</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h3 class="section-title">Contact Information</h3>
+                        <div class="section-grid">
+                            <div class="input-grp">
+                                <label for="region">Region</label>
+                                <input id="region" type="text" required>
+                            </div>
+                            <div class="input-grp">
+                                <label for="district">District</label>
+                                <input id="district" type="text" required>
+                            </div>
+                            <div class="input-grp">
+                                <label for="ward">Ward</label>
+                                <input id="ward" type="text" required>
+                            </div>
+                            <div class="input-grp">
+                                <label for="address">postal Adrress</label>
+                                <input id="address" type="text" required>
+                            </div>
+                            <div class="input-grp">
+                                <label for="phone">Phone number (Student)</label>
+                                <input id="phone" type="number" placeholder="0XX XXX XXXX" required>
+                            </div>
+                            <div class="input-grp">
+                                <label for="email">Email (If any)</label>
+                                <input id="email" type="email" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h3 class="section-title">Parent / Guardian information</h3>
+                        <div class="section-grid">
+                            <div class="input-grp">
+                                <label for="name">Full name</label>
+                                <input id="name" type="text" required>
+                            </div>
+                            <div class="input-grp">
+                                <label for="parent-phone">Phone number</label>
+                                <input id="parent-phone" type="number" placeholder="0XX XXX XXXX" required>
+                            </div>
+                            <div class="input-grp">
+                                <label for="ocupation">Ocupation</label>
+                                <input id="ocupation" type="text" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-section docs">
+                        <h3 class="section-title">Required documents (to be presented)</h3>
+                        <p>1. Birth Certificate 2. Passport Size Photo (2)</p>
+                    </div>
+
+                    <div class="form-actions">
+                        <button class="button primary" type="submit">Submit Registration <span>→</span></button>
+                        <button class="button" type="reset">Reset Form</button>
+                        <p id="formMessage" class="form-message"></p>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <div id="footer"></div>
+    <script src="static/script.js"></script>
+</body>
+</html>
