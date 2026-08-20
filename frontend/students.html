@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,10 +8,41 @@
     <title>Students | Iyunga Technical Secondary School</title>
     <link rel="stylesheet" href="static/style.css">
 </head>
+
 <body>
-    <div id="header"></div>
+
+    <header class="site-header" id="siteHeader">
+        <div class="container header-inner">
+
+            <a class="brand" href="index.html">
+                <span class="brand-mark">IT</span>
+                <span class="brand-text">
+                    <strong>IYUNGA TECH.</strong>
+                    <small>Secondary School · Mbeya</small>
+                </span>
+            </a>
+
+            <button class="nav-toggle" id="navToggle" type="button" aria-label="Open navigation">
+                ☰
+            </button>
+
+            <nav class="nav-shell" id="navShell">
+                <ul class="nav-links">
+                    <li><a class="nav-link" href="index.html">Home</a></li>
+                    <li><a class="nav-link" href="index.html#about">About</a></li>
+                    <li><a class="nav-link" href="index.html#academics">Academics</a></li>
+                    <li><a class="nav-link" href="index.html#gallery">Gallery</a></li>
+                    <li><a class="nav-link" href="index.html#contacts">Contact</a></li>
+                    <li><a class="nav-link" href="students.html">Students</a></li>
+                    <li><a class="nav-btn" href="add-students.html">Enrol now</a></li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
 
     <main class="page-main">
+
         <section class="page-hero compact">
             <div class="container">
                 <p class="eyebrow">STUDENT MANAGEMENT</p>
@@ -20,42 +52,113 @@
         </section>
 
         <section class="section">
+
             <div class="container">
+
                 <div class="page-actions">
                     <div>
                         <p class="eyebrow">RECORDS</p>
                         <h2>Student Records</h2>
                     </div>
-                    <a class="button primary" href="add-students.html">Add Student <span>+</span></a>
+
+                    <a class="button primary" href="add-students.html">
+                        Add Student <span>+</span>
+                    </a>
                 </div>
 
                 <div class="table-box">
+
                     <table class="student-table">
+
                         <thead>
                             <tr>
-                                <th>Student ID</th>
+                                <th>No.</th>
                                 <th>Full Name</th>
-                                <th>Gender</th>
                                 <th>Level</th>
-                                <th>Class</th>
+                                <th>Nationality</th>
+                                <th>Phone</th>
+                                <th>Actions</th>
                             </tr>
                         </thead>
-                        <tbody>
+
+                        <tbody id="studentTableBody">
                             <tr>
-                                <td>—</td>
-                                <td>No students registered yet</td>
-                                <td>—</td>
-                                <td>—</td>
-                                <td>—</td>
+                                <td colspan="6">No students registered yet</td>
                             </tr>
                         </tbody>
+
                     </table>
+
                 </div>
+
             </div>
+
         </section>
+
     </main>
 
-    <div id="footer"></div>
+    <footer id="contacts" class="footer">
+
+        <div class="container footer-grid">
+
+            <div class="footer-intro">
+                <div class="footer-brand">
+                    <span class="brand-mark">IT</span>
+                    <span>
+                        <strong>IYUNGA TECH.</strong>
+                        <small>Secondary School · Mbeya</small>
+                    </span>
+                </div>
+
+                <p>
+                    For admissions, joining instructions and general enquiries,
+                    contact the school administration.
+                </p>
+
+                <a href="mailto:iyungasecondary@gmail.com">
+                    iyungasecondary@gmail.com
+                </a>
+            </div>
+
+            <div>
+                <h3>Quick Links</h3>
+                <a href="index.html">Home</a>
+                <a href="index.html#about">About</a>
+                <a href="index.html#academics">Academics</a>
+                <a href="students.html">Students</a>
+                <a href="index.html#contacts">Contact</a>
+            </div>
+
+            <div>
+                <h3>Our Programs</h3>
+                <span>Science</span>
+                <span>Commerce</span>
+                <span>Technical Studies</span>
+                <span>Arts</span>
+                <span>Sports</span>
+            </div>
+
+            <div class="contact-details">
+                <h3>Contact Us</h3>
+                <p><span>ADDRESS</span>P.O. Box 701<br>Mbeya, Tanzania</p>
+                <p><span>SCHOOL</span>+255 25 250 2024</p>
+                <p><span>HEAD MASTER</span>+255 754 048 835</p>
+                <p><span>WEBSITE</span>iyungatechnicalschool.sc.tz</p>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container">
+                <span>
+                    &copy; <span id="year"></span> Iyunga Technical Secondary School
+                </span>
+            </div>
+        </div>
+
+    </footer>
+
     <script src="static/script.js"></script>
 </body>
+
 </html>

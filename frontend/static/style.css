@@ -58,8 +58,6 @@ button {
     margin: 0 auto;
 }
 
-/* HEADER */
-
 .site-header {
     position: fixed;
     top: 0;
@@ -168,8 +166,6 @@ button {
     padding: 7px 10px;
 }
 
-/* BUTTONS */
-
 .button {
     display: inline-flex;
     align-items: center;
@@ -203,8 +199,6 @@ button {
     box-shadow: 0 8px 20px rgba(12, 155, 87, .18);
 }
 
-/* HOME */
-
 .hero {
     min-height: 650px;
     position: relative;
@@ -218,7 +212,7 @@ button {
     position: absolute;
     inset: 0;
     background:
-        linear-gradient(90deg, rgba(255,255,255,.98) 0%, rgba(255,255,255,.92) 38%, rgba(255,255,255,.28) 67%, rgba(255,255,255,.05) 100%),
+        linear-gradient(45deg, rgba(255, 255, 255, .8) 0%, rgba(255, 255, 255, .92) 38%, rgba(255, 255, 255, .28) 67%, rgba(255, 255, 255, .05) 100%),
         url("../images/hero.jpg") center / cover no-repeat;
 }
 
@@ -307,8 +301,6 @@ button {
     color: #b6c8d2;
     font-size: 11px;
 }
-
-/* SECTIONS */
 
 .section {
     padding: 82px 0;
@@ -503,22 +495,26 @@ button {
     opacity: .88;
 }
 
-/* PAGE HEADERS */
-
 .page-main {
     padding-top: 72px;
 }
 
 .page-hero {
     padding: 68px 0 48px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 70px);
     background:
-        linear-gradient(90deg, rgba(7,26,45,.93), rgba(7,26,45,.72)),
+        linear-gradient(90deg, rgba(7, 26, 45, .93), rgba(7, 26, 45, .72)),
         url("../images/hero.jpg") center / cover no-repeat;
     border-bottom: 4px solid var(--green);
 }
 
 .page-hero.compact {
     padding-bottom: 42px;
+    min-height: 100vh;
 }
 
 .page-hero h1 {
@@ -533,8 +529,6 @@ button {
     color: #d2e0e7;
     font-size: 14px;
 }
-
-/* REGISTRATION */
 
 .registration-section {
     background: var(--bg);
@@ -552,7 +546,7 @@ button {
     margin-bottom: 0;
 }
 
-.form-heading > p {
+.form-heading>p {
     max-width: 440px;
 }
 
@@ -644,8 +638,6 @@ button {
     display: none;
 }
 
-/* STUDENTS */
-
 .page-actions {
     display: flex;
     align-items: end;
@@ -699,8 +691,6 @@ button {
     border-bottom: 0;
 }
 
-/* FOOTER */
-
 .footer {
     background: var(--navy);
     color: #d8e5eb;
@@ -727,8 +717,8 @@ button {
     font-size: 13px;
 }
 
-.footer-grid > div:not(.footer-intro) a,
-.footer-grid > div:not(.footer-intro) span {
+.footer-grid>div:not(.footer-intro) a,
+.footer-grid>div:not(.footer-intro) span {
     display: block;
     margin: 7px 0;
     color: #afc0c9;
@@ -746,7 +736,7 @@ button {
     font-size: 12px;
 }
 
-.footer-intro > a {
+.footer-intro>a {
     color: #71dca2;
     font-size: 12px;
 }
@@ -772,8 +762,6 @@ button {
     font-size: 10px;
 }
 
-/* BACK TO TOP */
-
 .back-top {
     position: fixed;
     right: 22px;
@@ -793,7 +781,49 @@ button {
     display: block;
 }
 
-/* MOBILE */
+.table-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 62px;
+    padding: 7px 11px;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 1;
+    cursor: pointer;
+    transition: background .2s ease, border-color .2s ease, color .2s ease, transform .2s ease;
+}
+
+.table-button:hover {
+    transform: translateY(-1px);
+}
+
+.table-button.edit {
+    margin-right: 5px;
+    border-color: #9bc9ed;
+    background: var(--blue-light);
+    color: #1769a8;
+}
+
+.table-button.edit:hover {
+    border-color: var(--blue);
+    background: var(--blue);
+    color: #fff;
+}
+
+.table-button.delete {
+    border-color: #efb2b2;
+    background: #fff0f0;
+    color: #c03939;
+}
+
+.table-button.delete:hover {
+    border-color: #d93636;
+    background: #d93636;
+    color: #fff;
+}
 
 @media (max-width: 850px) {
     .nav-toggle {
@@ -843,7 +873,7 @@ button {
 
     .hero-image {
         background:
-            linear-gradient(180deg, rgba(255,255,255,.97) 0%, rgba(255,255,255,.91) 48%, rgba(255,255,255,.35) 100%),
+            linear-gradient(180deg, rgba(255, 255, 255, .97) 0%, rgba(255, 255, 255, .91) 48%, rgba(255, 255, 255, .35) 100%),
             url("../images/hero.jpg") center / cover no-repeat;
     }
 
@@ -880,6 +910,11 @@ button {
 
     .footer-grid {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .table-button {
+        min-width: 60px;
+        padding: 8px 10px;
     }
 }
 
@@ -953,7 +988,7 @@ button {
         display: block;
     }
 
-    .form-heading > p {
+    .form-heading>p {
         margin-top: 12px;
     }
 
@@ -967,5 +1002,15 @@ button {
 
     .gallery img {
         height: 230px;
+    }
+
+    .table-button {
+        min-width: 58px;
+        padding: 8px 9px;
+        font-size: 10px;
+    }
+
+    .table-button.edit {
+        margin-right: 4px;
     }
 }

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,8 +8,33 @@
     <title>Iyunga Technical Secondary School | Mbeya</title>
     <link rel="stylesheet" href="static/style.css">
 </head>
+
 <body>
-    <div id="header"></div>
+    <header class="site-header" id="siteHeader">
+        <div class="container header-inner">
+            <a class="brand" href="index.html">
+                <span class="brand-mark">IT</span>
+                <span class="brand-text">
+                    <strong>IYUNGA TECH.</strong>
+                    <small>Secondary School · Mbeya</small>
+                </span>
+            </a>
+
+            <button class="nav-toggle" id="navToggle" type="button" aria-label="Open navigation">☰</button>
+
+            <nav class="nav-shell" id="navShell">
+                <ul class="nav-links">
+                    <li><a class="nav-link" href="index.html">Home</a></li>
+                    <li><a class="nav-link" href="index.html#about">About</a></li>
+                    <li><a class="nav-link" href="index.html#academics">Academics</a></li>
+                    <li><a class="nav-link" href="index.html#gallery">Gallery</a></li>
+                    <li><a class="nav-link" href="index.html#contacts">Contact</a></li>
+                    <li><a class="nav-link" href="students.html">Students</a></li>
+                    <li><a class="nav-btn" href="add-students.html">Enrol now</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
     <main>
         <section id="home" class="hero">
@@ -46,8 +72,10 @@
                 <h2>A historic school with a technical soul.</h2>
                 <div class="two-columns">
                     <div>
-                        <p class="lead">Iyunga Technical Secondary School is a government boys' boarding school located in
-                            Mbeya City, Tanzania. The school has a long history of secondary and technical education.</p>
+                        <p class="lead">Iyunga Technical Secondary School is a government boys' boarding school located
+                            in
+                            Mbeya City, Tanzania. The school has a long history of secondary and technical education.
+                        </p>
                         <p>The school is registered with the National Examinations Council of Tanzania under
                             examination centre <strong>S0112</strong>.</p>
                         <p>Iyunga combines normal secondary education with technical and engineering-oriented
@@ -148,8 +176,56 @@
         </section>
     </main>
 
-    <div id="footer"></div>
+    <footer id="contacts" class="footer">
+        <div class="container footer-grid">
+            <div class="footer-intro">
+                <div class="footer-brand">
+                    <span class="brand-mark">IT</span>
+                    <span>
+                        <strong>IYUNGA TECH.</strong>
+                        <small>Secondary School · Mbeya</small>
+                    </span>
+                </div>
+                <p>For admissions, joining instructions and general enquiries, contact the school administration.</p>
+                <a href="mailto:iyungasecondary@gmail.com">iyungasecondary@gmail.com</a>
+            </div>
+
+            <div>
+                <h3>Quick Links</h3>
+                <a href="index.html">Home</a>
+                <a href="index.html#about">About</a>
+                <a href="index.html#academics">Academics</a>
+                <a href="students.html">Students</a>
+                <a href="index.html#contacts">Contact</a>
+            </div>
+
+            <div>
+                <h3>Our Programs</h3>
+                <span>Science</span>
+                <span>Commerce</span>
+                <span>Technical Studies</span>
+                <span>Arts</span>
+                <span>Sports</span>
+            </div>
+
+            <div class="contact-details">
+                <h3>Contact Us</h3>
+                <p><span>ADDRESS</span>P.O. Box 701<br>Mbeya, Tanzania</p>
+                <p><span>SCHOOL</span>+255 25 250 2024</p>
+                <p><span>HEAD MASTER</span>+255 754 048 835</p>
+                <p><span>WEBSITE</span>iyungatechnicalschool.sc.tz</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container">
+                <span>© <span id="year"></span> Iyunga Technical Secondary School</span>
+            </div>
+        </div>
+    </footer>
+
     <button class="back-top" id="backTop" type="button" aria-label="Back to top">↑</button>
     <script src="static/script.js"></script>
 </body>
+
 </html>
