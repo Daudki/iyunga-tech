@@ -1840,98 +1840,98 @@ button {
         background: #d93636;
         color: #fff;
     }
-}
 
-@media (max-width: 850px) {
-    .nav-toggle {
-        display: block;
-    }
+    @media (max-width: 850px) {
+        .nav-toggle {
+            display: block;
+        }
 
-    .nav-shell {
-        display: none;
-        position: absolute;
-        top: 72px;
-        left: 0;
-        right: 0;
-        padding: 12px 4%;
-        background: var(--navy);
-        border-bottom: 1px solid #24445a;
-    }
+        .nav-shell {
+            display: none;
+            position: absolute;
+            top: 72px;
+            left: 0;
+            right: 0;
+            padding: 12px 4%;
+            background: var(--navy);
+            border-bottom: 1px solid #24445a;
+        }
 
-    .nav-shell.open {
-        display: block;
-    }
+        .nav-shell.open {
+            display: block;
+        }
 
-    .nav-links {
-        display: block;
-    }
+        .nav-links {
+            display: block;
+        }
 
-    .nav-links li {
-        margin: 0;
-    }
+        .nav-links li {
+            margin: 0;
+        }
 
-    .nav-link {
-        display: block;
-        padding: 12px 4px;
-    }
+        .nav-link {
+            display: block;
+            padding: 12px 4px;
+        }
 
-    .nav-link::after {
-        bottom: 7px;
-    }
+        .nav-link::after {
+            bottom: 7px;
+        }
 
-    .nav-btn {
-        display: inline-block;
-        margin: 8px 0 5px;
-    }
+        .nav-btn {
+            display: inline-block;
+            margin: 8px 0 5px;
+        }
 
-    .hero {
-        min-height: 620px;
-    }
+        .hero {
+            min-height: 620px;
+        }
 
-    .hero-image {
-        background:
-            linear-gradient(180deg, rgba(255, 255, 255, .97) 0%, rgba(255, 255, 255, .91) 48%, rgba(255, 255, 255, .35) 100%),
-            url("../images/hero.jpg") center / cover no-repeat;
-    }
+        .hero-image {
+            background:
+                linear-gradient(180deg, rgba(255, 255, 255, .97) 0%, rgba(255, 255, 255, .91) 48%, rgba(255, 255, 255, .35) 100%),
+                url("../images/hero.jpg") center / cover no-repeat;
+        }
 
-    .hero-copy {
-        max-width: 500px;
-    }
+        .hero-copy {
+            max-width: 500px;
+        }
 
-    .facts-grid,
-    .details {
-        grid-template-columns: repeat(2, 1fr);
-    }
+        .facts-grid,
+        .details {
+            grid-template-columns: repeat(2, 1fr);
+        }
 
-    .facts-grid div:nth-child(2),
-    .details div:nth-child(2) {
-        border-right: 0;
-    }
+        .facts-grid div:nth-child(2),
+        .details div:nth-child(2) {
+            border-right: 0;
+        }
 
-    .two-columns {
-        grid-template-columns: 1fr;
-        gap: 30px;
-    }
+        .two-columns {
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
 
-    .cards {
-        grid-template-columns: 1fr;
-    }
+        .cards {
+            grid-template-columns: 1fr;
+        }
 
-    .gallery {
-        grid-template-columns: repeat(2, 1fr);
-    }
+        .gallery {
+            grid-template-columns: repeat(2, 1fr);
+        }
 
-    .section-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
+        .section-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
 
-    .footer-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
+        .footer-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
 
-    .table-button {
-        min-width: 60px;
-        padding: 8px 10px;
+        .table-button {
+            min-width: 60px;
+            padding: 8px 10px;
+        }
     }
 }
 
@@ -2030,4 +2030,5 @@ button {
     .table-button.edit {
         margin-right: 4px;
     }
+
 }
