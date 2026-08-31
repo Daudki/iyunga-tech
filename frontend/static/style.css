@@ -212,7 +212,7 @@ button {
     position: absolute;
     inset: 0;
     background:
-        linear-gradient(45deg, rgba(255, 255, 255, .8) 0%, rgba(255, 255, 255, .92) 38%, rgba(255, 255, 255, .28) 67%, rgba(255, 255, 255, .05) 100%),
+        linear-gradient(to right, rgba(255, 255, 255, .8) 0%, rgba(255, 255, 255, .28) 38%, rgba(255, 255, 255, .05) 67%, rgba(0, 0, 0, .5) 100%),
         url("../images/hero.jpg") center / cover no-repeat;
 }
 

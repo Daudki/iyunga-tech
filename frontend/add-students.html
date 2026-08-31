@@ -13,7 +13,6 @@
 
     <header class="site-header" id="siteHeader">
         <div class="container header-inner">
-
             <a class="brand" href="index.html">
                 <span class="brand-mark">IT</span>
                 <span class="brand-text">
@@ -67,124 +66,39 @@
 
                 <form id="addForm" class="registration-form">
 
-                    <div class="form-section">
-                        <h3 class="section-title">Personal Information</h3>
-
-                        <div class="section-grid">
-
-                            <div class="input-grp">
-                                <label for="first-name">First Name</label>
-                                <input id="first-name" name="firstName" type="text" autocomplete="given-name" required>
-                            </div>
-
-                            <div class="input-grp">
-                                <label for="second-name">Second Name</label>
-                                <input id="second-name" name="secondName" type="text" required>
-                            </div>
-
-                            <div class="input-grp">
-                                <label for="surname">Surname</label>
-                                <input id="surname" name="surname" type="text" autocomplete="family-name" required>
-                            </div>
-
-                            <div class="input-grp">
-                                <label for="level">Level</label>
-                                <select id="level" name="level" required>
-                                    <option value="">Select Level</option>
-                                    <option value="Form 1">Form 1</option>
-                                    <option value="Form 2">Form 2</option>
-                                    <option value="Form 3">Form 3</option>
-                                    <option value="Form 4">Form 4</option>
-                                    <option value="Form 5">Form 5</option>
-                                    <option value="Form 6">Form 6</option>
-                                </select>
-                            </div>
-
-                            <div class="input-grp">
-                                <label for="date">Date of Birth</label>
-                                <input id="date" name="dateOfBirth" type="date" required>
-                            </div>
-
-                            <div class="input-grp">
-                                <label for="birth-place">Birth Place</label>
-                                <input id="birth-place" name="birthPlace" type="text" required>
-                            </div>
-
-                            <div class="input-grp">
-                                <label for="nationality">Nationality</label>
-                                <input id="nationality" name="nationality" type="text" value="Tanzanian" required>
-                            </div>
-
-                            <div class="input-grp">
-                                <label for="religion">Religion</label>
-                                <select id="religion" name="religion">
-                                    <option value="">Select Religion</option>
-                                    <option value="Christian">Christian</option>
-                                    <option value="Islam">Islam</option>
-                                    <option value="Other">Other</option>
-                                    <option value="Prefer not to say">Prefer not to say</option>
-                                </select>
-                            </div>
-
+                    <section>
+                        <div class="input-grp">
+                            <label>First Name</label>
+                            <input id="firstName" required>
                         </div>
-                    </div>
 
-                    <div class="form-section">
-                        <h3 class="section-title">Contact Information</h3>
-
-                        <div class="section-grid">
-
-                            <div class="input-grp">
-                                <label for="region">Region</label>
-                                <input id="region" name="region" type="text" required>
-                            </div>
-
-                            <div class="input-grp">
-                                <label for="district">District</label>
-                                <input id="district" name="district" type="text" required>
-                            </div>
-
-                            <div class="input-grp">
-                                <label for="ward">Ward</label>
-                                <input id="ward" name="ward" type="text" required>
-                            </div>
-
-                            <div class="input-grp">
-                                <label for="address">Postal Address</label>
-                                <input id="address" name="address" type="text" required>
-                            </div>
-
-                            <div class="input-grp">
-                                <label for="phone">Phone Number</label>
-                                <input id="phone" name="phone" type="tel" inputmode="tel" placeholder="0XX XXX XXXX"
-                                    required>
-                            </div>
-
-                            <div class="input-grp">
-                                <label for="email">Email Address</label>
-                                <input id="email" name="email" type="email" placeholder="Optional">
-                            </div>
-
+                        <div class="input-grp">
+                            <label>Second Name</label>
+                            <input id="secondName" required>
                         </div>
-                    </div>
 
-                    <div class="form-section docs">
-                        <h3 class="section-title">Required Documents</h3>
-                        <p>1. Birth Certificate &nbsp; 2. Passport Size Photos (2)</p>
-                    </div>
+                        <div class="input-grp">
+                            <label>Email</label>
+                            <input id="email" type="email" required>
+                        </div>
 
-                    <div class="form-actions">
-                        <button id="submitButton" class="button primary" type="submit">
-                            Submit Registration <span>→</span>
-                        </button>
+                        <div class="input-grp">
+                            <label>Level</label>
+                            <select id="level" required>
+                                <option value="">Select Level</option>
+                                <option>Form I</option>
+                                <option>Form II</option>
+                                <option>Form III</option>
+                                <option>Form IV</option>
+                                <option>Form V</option>
+                                <option>Form VI</option>
+                            </select>
+                        </div>
+                    </section>
 
-                        <button class="button" type="reset">
-                            Reset Form
-                        </button>
-
-                        <p id="formMessage" class="form-message"></p>
-                    </div>
-
+                    <section class="form-actions">
+                        <button type="submit">Save Student</button>
+                    </section>
                 </form>
 
             </div>
