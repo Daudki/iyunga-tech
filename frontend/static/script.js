@@ -3,6 +3,7 @@ const API_URL = "http://localhost:8080/api/students";
 document.addEventListener("DOMContentLoaded", () => {
     setupNavigation();
     setupStudentForm();
+    setupEditModal();
     displayStudents();
     setupBackToTop();
     setupYear();
@@ -49,6 +50,92 @@ async function setupStudentForm() {
     });
 }
 
+function setupEditModal() {
+    const modal = document.getElementById("editStudentModal");
+    const form = document.getElementById("editStudentForm");
+    const closeButton = document.getElementById("closeEditModal");
+    const cancelButton = document.getElementById("cancelEditButton");
+
+    if (!modal || !form || !closeButton || !cancelButton) return;
+
+    closeButton.addEventListener("click", closeEditModal);
+    cancelButton.addEventListener("click", closeEditModal);
+
+    modal.addEventListener("click", event => {
+        if (event.target === modal) closeEditModal();
+    });
+
+    form.addEventListener("submit", async e => {
+        e.preventDefault();
+
+        const id = document.getElementById("editStudentId").value;
+        const student = {
+            firstName: document.getElementById("editFirstName").value.trim(),
+            secondName: document.getElementById("editSecondName").value.trim(),
+            email: document.getElementById("editEmail").value.trim(),
+            level: document.getElementById("editLevel").value
+        };
+
+        if (!id || !student.firstName || !student.secondName || !student.email || !student.level) {
+            alert("Please complete all fields before saving.");
+            return;
+        }
+
+        try {
+            const response = await fetch(`${API_URL}/${id}`, {
+                method: "PUT",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(student)
+            });
+
+            if (!response.ok) {
+                const errorText = await response.text();
+                throw new Error(errorText || "Unable to update the student.");
+            }
+
+            alert("Student updated successfully");
+            closeEditModal();
+            displayStudents();
+        } catch (error) {
+            alert(error.message || "Unable to update the student.");
+        }
+    });
+}
+
+function openEditStudent(id) {
+    const modal = document.getElementById("editStudentModal");
+    const form = document.getElementById("editStudentForm");
+    if (!modal || !form) return;
+
+    fetch(`${API_URL}/${id}`)
+        .then(response => {
+            if (!response.ok) throw new Error("Student not found");
+            return response.json();
+        })
+        .then(student => {
+            document.getElementById("editStudentId").value = student.id;
+            document.getElementById("editFirstName").value = student.firstName || "";
+            document.getElementById("editSecondName").value = student.secondName || "";
+            document.getElementById("editEmail").value = student.email || "";
+            document.getElementById("editLevel").value = student.level || "";
+            modal.classList.add("open");
+            modal.setAttribute("aria-hidden", "false");
+        })
+        .catch(error => {
+            alert(error.message || "Unable to load student details.");
+        });
+}
+
+function closeEditModal() {
+    const modal = document.getElementById("editStudentModal");
+    const form = document.getElementById("editStudentForm");
+    if (!modal || !form) return;
+
+    form.reset();
+    modal.classList.remove("open");
+    modal.setAttribute("aria-hidden", "true");
+}
+
 async function displayStudents() {
     const table = document.getElementById("studentTableBody");
     if (!table) return;
@@ -67,7 +154,10 @@ async function displayStudents() {
             <td>${escapeHTML(student.firstName)} ${escapeHTML(student.secondName)}</td>
             <td>${escapeHTML(student.email)}</td>
             <td>${escapeHTML(student.level)}</td>
-            <td><button type="button" onclick="deleteStudent(${student.id})">Delete</button></td>
+            <td class="student-actions">
+                <button type="button" class="action-btn edit-btn" onclick="openEditStudent(${student.id})">Edit</button>
+                <button type="button" class="action-btn delete-btn" onclick="deleteStudent(${student.id})">Delete</button>
+            </td>
             </tr>`;
         });
     } catch (e) {
