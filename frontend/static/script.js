@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:8080/api/students";
+const API_URL = "https://iyunga-backend-zylh.onrender.com/api/students";
 
 document.addEventListener("DOMContentLoaded", () => {
     setupNavigation();
