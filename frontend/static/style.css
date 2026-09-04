@@ -53,6 +53,105 @@ button {
     cursor: pointer;
 }
 
+.action-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 70px;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 6px;
+    color: var(--white);
+    font-size: 12px;
+    font-weight: 700;
+    transition: transform .2s ease, opacity .2s ease, box-shadow .2s ease;
+}
+
+.action-btn:hover {
+    transform: translateY(-1px);
+    opacity: .96;
+}
+
+.action-btn.edit-btn {
+    background: var(--blue);
+    box-shadow: 0 8px 20px rgba(35, 132, 216, .18);
+}
+
+.action-btn.delete-btn {
+    background: #d94a4a;
+    box-shadow: 0 8px 20px rgba(217, 74, 74, .18);
+}
+
+.student-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.modal-backdrop {
+    position: fixed;
+    inset: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    background: rgba(7, 26, 45, .6);
+    z-index: 200;
+}
+
+.modal-backdrop.open {
+    display: flex;
+}
+
+.modal-panel {
+    width: min(100%, 500px);
+    background: var(--white);
+    border-radius: 14px;
+    box-shadow: 0 24px 60px rgba(7, 26, 45, .2);
+    padding: 22px;
+}
+
+.modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 18px;
+}
+
+.modal-header h3 {
+    color: var(--navy);
+    font-size: 1.3rem;
+}
+
+.close-modal {
+    width: 36px;
+    height: 36px;
+    border: 1px solid var(--line);
+    border-radius: 50%;
+    background: transparent;
+    font-size: 1.5rem;
+    line-height: 1;
+    color: var(--text);
+}
+
+.modal-form {
+    display: grid;
+    gap: 16px;
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.button.secondary {
+    border-color: var(--line);
+    background: var(--white);
+    color: var(--text);
+}
+
 .container {
     width: min(92%, var(--max));
     margin: 0 auto;
