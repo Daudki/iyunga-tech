@@ -136,9 +136,12 @@ function closeEditModal() {
     modal.setAttribute("aria-hidden", "true");
 }
 
-async function displayStudents() {
+async function displayStudents(attempt = 1) {
     const table = document.getElementById("studentTableBody");
     if (!table) return;
+    if (attempt === 1) {
+        table.innerHTML = '<tr><td colspan="5">Loading students. The server may take up to a minute to wake up.</td></tr>';
+    }
     try {
         const response = await fetch(API_URL);
         if (!response.ok) throw new Error(`HTTP ${response.status}`);
@@ -161,8 +164,11 @@ async function displayStudents() {
             </tr>`;
         });
     } catch (e) {
-        console.error("Backend unavailable", e);
-        table.innerHTML = '<tr><td colspan="5">Unable to load students from the backend.</td></tr>';
+        if (attempt < 4) {
+            setTimeout(() => displayStudents(attempt + 1), 15000);
+            return;
+        }
+        table.innerHTML = '<tr><td colspan="5">Unable to load students from the backend. Please refresh the page.</td></tr>';
     }
 }
 
